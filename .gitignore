@@ -35,4 +35,4 @@ Thumbs.db
 
 # Build output
 dist/
-build/
+build/backend/minikube-linux-amd64
