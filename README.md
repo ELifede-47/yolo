@@ -1,15 +1,14 @@
-# Overview
-This project involved the containerization and deployment of a full-stack yolo application using Docker.
+# yolo (Dockerized)
 
+## 📦 Services
 
-# Requirements
-Install the docker engine here:
-- [Docker](https://docs.docker.com/engine/install/) 
+- Frontend (React)
+- Backend (Node.js)
+- PostgreSQL Database
 
-## How to launch the application 
+## 🚀 Getting Started
 
-
-![Alt text](image.png)
-
-## How to run the app
-Use vagrant up --provison command
+```bash
+git clone https://github.com/ELifede-47/yolo
+cd yolo
+docker-compose up --build

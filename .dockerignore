@@ -1,17 +1,33 @@
+# Node.js
 node_modules
 npm-debug.log
-build
-.dockerignore
-**/.git
-**/.DS_Store
-**/node_modules
-**Dockerfile
-Dockerfile*
+yarn-error.log
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+env/
+venv/
+
+# Git
 .git
-.github
 .gitignore
-dist/**
-README.md
-.vscode
-app-mongo-data
-app-mongo-data/
+
+# Docker
+Dockerfile
+.dockerignore
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Build output
+build/
+dist/
+
+# Kubernetes
+*.yaml
+
+# Other
+*.env

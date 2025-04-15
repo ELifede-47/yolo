@@ -1,9 +1,38 @@
-app-mongo-data
-app-mongo-data/
-vars.yml
-vault.yml
-.vagrant/
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+env/
+venv/
+*.env
+*.egg-info/
+
+# VSCode settings
 .vscode/
-.vscode
-.vscode/*
-.vscode/*.json
+
+# Docker
+*.log
+docker-compose.override.yml
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Kubernetes configs (optional, if generated dynamically)
+*.yaml
+
+# Others
+.env.local
+.env.production
+.env.development
+
+# Build output
+dist/
+build/

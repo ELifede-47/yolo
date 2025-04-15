@@ -1,0 +1,25 @@
+# Node dependencies
+node_modules/
+npm-debug.log
+yarn-error.log
+pnpm-lock.yaml
+
+# Build output (skip if building inside Docker)
+dist/
+build/
+.next/         # Next.js
+out/           # Next.js static export
+
+# Env files
+.env
+.env.*.local
+
+# Editor/system files
+.DS_Store
+.vscode/
+.idea/
+*.swp
+
+# Git
+.git/
+.gitignore
