@@ -1,5 +1,0 @@
-FROM ubuntu:latest
-RUN sudo apt update
-RUN sudo apt install nginx -y
-EXPOSE 80
-CMD ["nginx", "-g", "daemon off;"]
