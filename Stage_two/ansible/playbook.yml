@@ -1,0 +1,30 @@
+- name: Provision and configure backend server
+  hosts: localhost
+  connection: local
+  gather_facts: false
+
+  tasks:
+    - name: Run Terraform to provision VM
+      community.general.terraform:
+        project_path: ../terraform
+        state: present
+        force_init: yes
+
+    - name: Get Terraform output (VM IP)
+      community.general.terraform_output:
+        project_path: ../terraform
+        name: vm_ip
+      register: tf_output
+
+    - name: Add new host to inventory
+      add_host:
+        name: "{{ tf_output.value }}"
+        groups: provisioned
+
+- name: Configure provisioned VM
+  hosts: provisioned
+  become: yes
+  vars:
+    ansible_user: vagrant
+  roles:
+    - backend

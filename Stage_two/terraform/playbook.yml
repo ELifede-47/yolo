@@ -1,0 +1,8 @@
+---
+- name: Deploy application
+  hosts: localhost
+  tasks:
+    - name: Ensure package is installed
+      apt:
+        name: "nginx"
+        state: present

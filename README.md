@@ -1,15 +1,32 @@
-# Overview
-This project involved the containerization and deployment of a full-stack yolo application using Docker.
+# 🛒 E-Commerce (YOLO) Platform Deployment
 
+## 🏄‍♂️ Overview
 
-# Requirements
-Install the docker engine here:
-- [Docker](https://docs.docker.com/engine/install/) 
+This project involved the **containerization and deployment of a full-stack YOLO application** using **Docker**. The deployment is automated with **Ansible**, and infrastructure provisioning is optionally handled with **Terraform** and **Vagrant**.
 
-## How to launch the application 
+The application includes:
+- ✅ Database container
+- ✅ Backend API container
+- ✅ Frontend application container
+- ✅ (Optional) Nginx reverse proxy
 
+---
 
-![Alt text](image.png)
+## 🔧 Requirements
 
-## How to run the app
-Use vagrant up --provison command
+You need Docker installed on the target machine. Install Docker using the official instructions here:
+
+👉 [Install Docker Engine](https://docs.docker.com/engine/install/)
+
+Also ensure:
+- ✅ Ansible is installed
+- ✅ (Optional) Vagrant & VirtualBox are installed for local VM provisioning
+
+---
+
+## 🚀 **How to Launch the Application**
+
+You can launch the application via **Vagrant**:
+
+```bash
+vagrant up --provision

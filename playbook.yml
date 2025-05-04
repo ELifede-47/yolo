@@ -1,9 +1,12 @@
 ---
-- name: Ansible playbook to dockerize and run yolo e-commerce app using ansible
-  hosts: all
-  become: true
-  roles: 
-    - frontend-deployment
-    - setup-mongodb   
-    - backend-deployment
-    
+- name: Deploy backend container
+  hosts: localhost
+  connection: local
+  become: yes
+  tasks:
+    - name: Create Node.js Backend Container
+      docker_container:
+        name: my-backend-container
+        image: my-backend
+        ports:
+          - "5000:5000"

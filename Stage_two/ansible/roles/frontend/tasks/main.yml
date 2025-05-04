@@ -1,0 +1,34 @@
+- block:
+    - name: Clone frontend repo
+      git:
+        repo: "https://github.com/yourusername/frontend-repo.git"
+        dest: "/home/vagrant/frontend"
+    - name: Build frontend Docker image
+      docker_image:
+        path: "/home/vagrant/frontend"
+        name: frontend-image
+        tag: latest
+    - name: Run frontend container
+      docker_container:
+        name: frontend
+        image: frontend-image:latest
+        ports:
+          - "{{ frontend_port }}:{{ frontend_port }}"
+  tags: frontend
+- name: Clone frontend repo
+  git:
+    repo: "{{ frontend_repo }}"
+    dest: "/home/vagrant/frontend"
+
+- name: Build frontend docker image
+  docker_image:
+    path: "/home/vagrant/frontend"
+    name: frontend-image
+    tag: latest
+
+- name: Run frontend container
+  docker_container:
+    name: frontend
+    image: frontend-image:latest
+    ports:
+      - "{{ frontend_port }}:{{ frontend_port }}"
